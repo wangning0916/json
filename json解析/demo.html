@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>demo</title>
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript">	
+
+		//JSON字符串	
+		var stra = '{"name":"cxh","sex":"man"}';
+		//JSON对象
+   		var strb = { "name": "cxh", "sex": "man" };
+		
+		//由JSON字符串转换为JSON对象eval()
+		var str1 = '{"name":"cxh","sex":"man"}';
+		str1 = eval('(' + str1 + ')');
+		console.log(str1);
+
+
+		//由JSON字符串转换为JSON对象2
+		var str2 = '{"name":"cxh","sex":"man"}';
+		str2 = JSON.parse(str2);
+		console.log(str2);
+
+
+		//由JSON字符串转换为JSON对象3,jquery的方法不建议使用
+		var str3 = '{"name":"cxh","sex":"man"}';
+		str3 = $.parseJSON(str3);
+		console.log(str3);
+
+		//从一个对象中解析出字符串
+		var arr = ["a", "b", "c"];  
+		var str = JSON.stringify(arr); 
+		console.log(str);
+		
+		//从一个字符串中解析出json对象
+		str = JSON.parse(str);
+		console.log(str);
+	</script>
+</head>
+<body>	
+</body>
+</html>
